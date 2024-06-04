@@ -21,5 +21,11 @@ else
     }
     return acu;
 }
+{
+    int fatorial (int x){
+
+    }
+
+}
 
 #endif 
