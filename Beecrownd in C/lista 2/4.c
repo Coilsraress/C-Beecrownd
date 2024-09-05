@@ -13,7 +13,10 @@ reverse (str, ini+1, fim-1);
 }
 
 int main() {
-    char string[] = "Paralelepipedo";
+    char string[201];
+    fgets(string, 201, stdin);
+    if(string[strlen(string)-1]=='\n')
+    string[strlen(string)-1]='\0';
 
     reverse(string, 0, strlen(string) - 1);
 
