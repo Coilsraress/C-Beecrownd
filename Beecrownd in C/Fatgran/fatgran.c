@@ -2,7 +2,7 @@
 
 void multiplicaVetor(int vetor[], int x, int parada){
     int carry = 0;
-    for(int i=9999; i>= parada; i--){
+    for(int i=999999; i>= parada; i--){
         vetor[i] = x*vetor[i] + carry;
         carry = vetor[i]/10;
         vetor[i] = vetor[i] % 10;
@@ -23,17 +23,17 @@ int main()
 
 	int parada;
     
-	int vetor[10000];
+	int vetor[1000000];
 
-	for (int i=0; i<10000; i++) {
+	for (int i=0; i<1000000; i++) {
 		vetor[i]=0;
 	}
 
-	vetor [9999] = 1;
+	vetor [999999] = 1;
 
 
 	for (int x = n; x>1; x--) {
-		for(int i=0; i<10000; i++) {
+		for(int i=0; i<1000000; i++) {
             if(vetor[i]!=0){
                 parada = i;
                 break;
@@ -42,7 +42,7 @@ int main()
 		multiplicaVetor(vetor, x, parada);
 	}
 
-		for(int i=0; i<10000; i++) {
+		for(int i=0; i<1000000; i++) {
             if(vetor[i]!=0){
                 parada = i;
                 break;
@@ -50,7 +50,7 @@ int main()
 		}
 		
 printf("Resultado: ");
-for (int i = parada; i < 10000; i++) {
+for (int i = parada; i < 1000000; i++) {
     printf("%d", vetor[i]);
 }
 printf("\n");
